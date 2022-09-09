@@ -12,29 +12,63 @@
 <body>
 
     <header>
-        <h1>Minha Loja</h1>
+        <h1>MINHA LOJA</h1>
     </header>
 
     <main>
-        <div class="title">
-            <h1>Produtos</h1>
-            <span>Lista de produtos da minha loja</span>
-        </div>
-
-        <div class="card">
-            <div class="input">
-                <label>Produto</label>
-                <input type="text" placeholder="Nome do Produto" id="produto">
+        <section class="section-1">
+            <div class="title">
+                <h1>Produtos</h1>
+                <span>Lista de produtos da minha loja</span>
             </div>
-            <div class="input">
-                <label>Valor</label>
-                <input type="text" placeholder="Valor do Produto" id="valor">
+    
+            <div class="card">
+                <div class="input">
+                    <label>Produto</label>
+                    <input type="text" placeholder="Nome do Produto" id="produto">
+                </div>
+                <div class="input">
+                    <label>Valor</label>
+                    <input type="text" placeholder="Valor do Produto" id="valor">
+                </div>
+                <div class="div-button">
+                    <button onclick="produto.adicionar()">Adicionar</button>
+                    <button onclick="produto.deletar()">Deletar</button>
+                </div>
             </div>
-            <div class="div-button">
-                <button onclick="produto.adicionar()">Adicionar</button>
-                <button onclick="produto.deletar()">Deletar</button>
-            </div>
-        </div>
+        </section>
+        <section class="section-2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Smart TV 4k 55'</td>
+                        <td>3500</td>
+                        <td class="td-img">
+                            <img src="./img/edit.png" alt="edit">
+                            <img src="./img/delete.png" alt="delete">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Smart TV 4k 55'</td>
+                        <td>3500</td>
+                        <td class="td-img">
+                            <img src="./img/edit.png" alt="edit">
+                            <img src="./img/delete.png" alt="delete">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
     
 </body>

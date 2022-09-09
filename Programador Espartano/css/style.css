@@ -15,6 +15,8 @@ body {
     background: rgb(236, 236, 236);
 }
 
+
+/* HEADER */
 header {
     background: #0A66C2;
     display: flex;
@@ -28,14 +30,23 @@ header h1 {
     font-family: 'Righteous', cursive;
 }
 
+/* MAIN */
 main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* FORMULARIO */
+.section-1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
     font-family: 'Sarala', sans-serif;
-    padding: 40px;
+    padding: 30px;
 }
 
 .title {
@@ -70,15 +81,21 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
 }
 
 .div-button {
     display: flex;
-    gap: 10px;    
+    align-items: center;
+    justify-content: center;
+    gap: 20px;    
+    padding-top: 5px;
+    width: 100%;
 }
 
 button {
-    width: 100px;
+    width: 100%;
+    max-width: 120px;
     padding: 6px;
     background: #0A66C2;
     border: none;
@@ -98,4 +115,51 @@ button:active {
     cursor: wait;
     transform: scale(1.1);
     transition: 0.1s;
+}
+
+/* TABELA */
+.section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Sarala', sans-serif;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+table {
+    max-width: 550px;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.215);
+}
+
+table thead th {
+    border-bottom: 2px solid black;
+    background: #0A66C2;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 5px;
+}
+
+table tbody td {
+    padding: 10px;
+    border-top: 2px solid rgb(238, 238, 238);
+}
+
+table tbody td img{
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 4px;
+}
+
+table tbody td img:hover {
+    cursor: pointer;
 }
