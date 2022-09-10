@@ -25,15 +25,15 @@
             <div class="card">
                 <div class="input">
                     <label>Produto</label>
-                    <input type="text" placeholder="Nome do Produto" id="produto">
+                    <input type="text" placeholder="Nome do produto" id="produto">
                 </div>
                 <div class="input">
-                    <label>Valor</label>
-                    <input type="text" placeholder="Valor do Produto" id="valor">
+                    <label>Preço</label>
+                    <input type="text" placeholder="Preço do produto" id="preco">
                 </div>
                 <div class="div-button">
-                    <button onclick="produto.adicionar()">Adicionar</button>
-                    <button onclick="produto.deletar()">Deletar</button>
+                    <button onclick="produto.salvar()">Salvar</button>
+                    <button onclick="produto.cancelar()">Cancelar</button>
                 </div>
             </div>
         </section>
@@ -47,25 +47,8 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Smart TV 4k 55'</td>
-                        <td>3500</td>
-                        <td class="td-img">
-                            <img src="./img/edit.png" alt="edit">
-                            <img src="./img/delete.png" alt="delete">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Smart TV 4k 55'</td>
-                        <td>3500</td>
-                        <td class="td-img">
-                            <img src="./img/edit.png" alt="edit">
-                            <img src="./img/delete.png" alt="delete">
-                        </td>
-                    </tr>
+                <tbody id="tbody">
+                    
                 </tbody>
             </table>
         </section>

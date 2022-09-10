@@ -112,9 +112,8 @@ button:hover {
 }
 
 button:active {
-    cursor: wait;
     transform: scale(1.1);
-    transition: 0.1s;
+    transition: 1ms;
 }
 
 /* TABELA */
@@ -124,9 +123,7 @@ button:active {
     align-items: center;
     flex-direction: column;
     font-family: 'Sarala', sans-serif;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px;
 }
 
 table {
