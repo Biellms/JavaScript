@@ -69,11 +69,17 @@ class Produto {
         let msg = '';
 
         if(produto.nomeProduto == '') {
-           msg += ' INFORME O NOME DO PRODUTO! \n'
+            msg += ' INFORME O NOME DO PRODUTO! \n'  
+            document.getElementById('produto').style.border = '1px solid red';
+        } else {
+            document.getElementById('produto').style.border = '1px solid #ccc';
         }
 
         if(produto.preco == '') {
-            msg += ' INFORME O PREÇO DO PRODUTO!' 
+            msg += ' INFORME O PREÇO DO PRODUTO!'
+            document.getElementById('preco').style.border = '1px solid red';
+        } else {
+            document.getElementById('preco').style.border = '1px solid #ccc';
         }
 
         if (msg != '') {
@@ -87,7 +93,7 @@ class Produto {
     cancelar() {
         document.getElementById('produto').value = '';
         document.getElementById('preco').value = '';
-        
+
         document.getElementById('buttonProduto').innerText = 'Salvar';
         
         this.idEdit = null;
@@ -126,3 +132,11 @@ class Produto {
 }
 
 var produto = new Produto;
+
+function handleOnFocus(x) {
+    x.style.border = '1px solid #0A66C2';
+}
+
+function handleOnBlur(x) {
+    x.style.border = '1px solid #ccc';
+}

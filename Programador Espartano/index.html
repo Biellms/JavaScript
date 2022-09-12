@@ -25,11 +25,13 @@
             <div class="card">
                 <div class="input">
                     <label>Produto</label>
-                    <input type="text" placeholder="Nome do produto" id="produto">
+                    <input type="text" placeholder="Nome do produto" id="produto" 
+                    onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
                 </div>
                 <div class="input">
                     <label>Preço</label>
-                    <input type="text" placeholder="Preço do produto" id="preco">
+                    <input type="text" placeholder="Preço do produto" id="preco" 
+                    onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
                 </div>
                 <div class="div-button">
                     <button id="buttonProduto" onclick="produto.salvar()">Salvar</button>
