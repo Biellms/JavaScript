@@ -69,11 +69,11 @@ class Produto {
         let msg = '';
 
         if(produto.nomeProduto == '') {
-           msg += 'Informe o nome do produto\n'
+           msg += ' INFORME O NOME DO PRODUTO! \n'
         }
 
         if(produto.preco == '') {
-            msg += 'Informe o preço do produto' 
+            msg += ' INFORME O PREÇO DO PRODUTO!' 
         }
 
         if (msg != '') {
