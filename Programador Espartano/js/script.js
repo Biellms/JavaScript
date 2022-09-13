@@ -4,6 +4,7 @@ class Produto {
         this.id = 1;
         this.arrayProdutos = [];
         this.idEdit = null;
+        this.total = 0;
     }
 
     salvar() {
@@ -19,6 +20,7 @@ class Produto {
         
         this.listaTabela();
         this.cancelar();
+        this.soma();
     }
 
     listaTabela() {
@@ -35,10 +37,10 @@ class Produto {
             let imgEdit = document.createElement('img');
             let imgDelete = document.createElement('img');
 
-            imgEdit.src = './img/edit.png';
+            imgEdit.src = 'img/edit.png';
             imgEdit.setAttribute('onclick', 'produto.startEdit('+ JSON.stringify(this.arrayProdutos[i]) +')');
 
-            imgDelete.src = './img/delete.png';
+            imgDelete.src = 'img/delete.png';
             imgDelete.setAttribute('onclick', 'produto.deletar('+ JSON.stringify(this.arrayProdutos[i]) +')'); 
 
             td_id.innerText = this.arrayProdutos[i].id;
@@ -109,7 +111,8 @@ class Produto {
                     tbody.deleteRow(i);
                 }
             }
-        } 
+        }
+        this.soma();
     }
 
     startEdit(dados) {
@@ -124,10 +127,21 @@ class Produto {
     atualizar(id, produto) {
         for (let i = 0; i < this.arrayProdutos.length; i++) {
             if (this.arrayProdutos[i].id == id) {
+                produto.preco = parseFloat(produto.preco);
                 this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
                 this.arrayProdutos[i].preco = produto.preco;
             }
         }
+    }
+
+    soma() {
+        this.total = 0;
+
+        for (let i = 0; i < this.arrayProdutos.length; i++) {
+            this.total += this.arrayProdutos[i].preco;
+        }
+
+        document.getElementById('valorTotal').innerText = 'Valor total: R$ ' + this.total
     }
 }
 

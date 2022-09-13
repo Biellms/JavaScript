@@ -151,6 +151,12 @@ table tbody td {
     border-top: 2px solid rgb(238, 238, 238);
 }
 
+table tfoot td {
+    font-weight: 700;
+    padding: 10px;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
 table tbody td img{
     height: 20px;
     padding-left: 3px;
