@@ -70,16 +70,18 @@ class Produto {
     validaCampos(produto) {
         let msg = '';
 
-        if(produto.nomeProduto == '') {
+        if(produto.nomeProduto == '') { 
             msg += ' INFORME O NOME DO PRODUTO! \n'  
-            document.getElementById('produto').style.border = '1px solid red';
+            document.getElementById('produto').style.border = '1px solid rgba(255, 0, 0, 35%)';
+            document.getElementById('produto').style.boxShadow = '0 0 5px rgba(255, 0, 0, 35%)';
         } else {
             document.getElementById('produto').style.border = '1px solid #ccc';
         }
 
         if(produto.preco == '') {
             msg += ' INFORME O PREÇO DO PRODUTO!'
-            document.getElementById('preco').style.border = '1px solid red';
+            document.getElementById('preco').style.border = '1px solid rgba(255, 0, 0, 35%)';
+            document.getElementById('preco').style.boxShadow = '0 0 5px rgba(255, 0, 0, 35%)';
         } else {
             document.getElementById('preco').style.border = '1px solid #ccc';
         }
@@ -148,9 +150,11 @@ class Produto {
 var produto = new Produto;
 
 function handleOnFocus(x) {
-    x.style.border = '1px solid #0A66C2';
+    x.style.border = '1px solid #0a66c28c';
+    x.style.boxShadow = '0 0 5px #0A66C2';
 }
 
 function handleOnBlur(x) {
     x.style.border = '1px solid #ccc';
+    x.style.boxShadow = 'none';
 }
