@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/style-3.css">
+    <script src="./JS/script-3.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="container-title">
+            <p>
+                CALCULADORA DE IMC
+            </p>
+        </div>
+        <div class="container-box">
+            <div class="input">
+                <label>Nome</label>
+                <input type="text" id="nome"
+                onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
+            </div>
+            <div class="input">
+                <label>Altura em centimetros</label>
+                <input type="text" id="altura"
+                onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
+            </div>
+            <div class="input">
+                <label>Peso </label>
+                <input type="text" id="peso"
+                onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
+            </div>
+                <div class="container-box-button">
+                    <button onclick="calcular()">CALCULAR</button>
+                    <button onclick="limpar()">LIMPAR</button>
+                </div>
+        </div>
+        <div id="resultadoIMC">
+            <div id="resultadoIMC-box">
+                <b id="nomeIMC"></b>, possui índice de massa corporal igual a <b id="rIMC"></b>, sendo classificado como: <b id="classIMC"></b>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
