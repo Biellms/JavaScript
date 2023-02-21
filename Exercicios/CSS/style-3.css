@@ -3,12 +3,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(30deg, rgba(102, 94, 226, 0.842) 0%, rgba(29, 29, 161, 0.334) 50%, rgba(0,32,156,0.30092592592592593) 100%);
 }
 
 .container {
     display: flex;
-    background: linear-gradient(30deg, rgba(102, 94, 226, 0.842) 0%, rgba(29, 29, 161, 0.334) 50%, rgba(0,32,156,0.30092592592592593) 100%);
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     flex-direction: column;
     gap: 45px;
@@ -93,6 +98,25 @@ button:active {
 
 #resultadoIMC-box {
     display: none;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    font-family: Arial, sans-serif;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgba(245, 245, 245, 0.582);
+    transition: 0.3s;
 }
 
 

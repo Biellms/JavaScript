@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: #20232A;
+}
+
+.container-title {
+    color: #61DAFB;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.container-lista {
+    background-color: #282C34;
+    width: 98%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+ol {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+li {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.container-actions {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    max-width: 100px;
+    height: 37px;
+    padding: 6px;
+    background: #61DAFB;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: .3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.300);
+}
+
+.button-inserir:hover {
+    background: white;
+}
+
+.button-ordenar:hover {
+    background: rgb(255, 242, 60);
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #20232A;
+}
+
+a {
+    font-family: Arial, sans-serif;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgba(245, 245, 245, 0.582);
+    transition: 0.3s;
+}
