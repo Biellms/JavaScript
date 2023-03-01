@@ -1,7 +1,17 @@
+let objetos = Array('Java', 'Spring', 'React', 'Typescript', 'HMTL5', 'CSS3', 'JavaScript')
+
+for (let i = 0; i < objetos.length; i++) {
+    let li = document.createElement('li')
+    
+    li.innerText = objetos[i]
+
+    document.getElementById('lista').appendChild(li)
+}
+
 function sort() {
     var list, i, switching, b, shouldSwitch;
 
-    list = document.getElementById("01");
+    list = document.getElementById("lista");
 
     switching = true;
 
@@ -25,16 +35,21 @@ function sort() {
 }
 
 function addItem() {
-    let list = document.getElementById("01");
+    let list = document.getElementById("lista");
     let li = document.createElement('li');
 
     arrayItem = document.getElementById('arrayItem').value
 
     if (arrayItem === '') {
-        alert('Digite um Item')
+        alert('Digite um item no campo para inserir na lista')
     } else {
-        list.appendChild(li)
-        li.innerText = arrayItem
+        if (objetos.includes(arrayItem)) {
+            alert('O item "'+arrayItem+'" já existe na lista')
+        } else {
+            list.appendChild(li)
+            li.innerText = arrayItem
+            objetos.push(arrayItem)
+        }
     }
 
 }
